@@ -21,7 +21,7 @@ def container_list():
     con_list = list()
     for container in client.containers.list():
         con_list.append({"Container id": container.id, "Container name": container.name})
-        print(con_list)
+        print(f"container list : {con_list}")
     return jsonify(con_list)
 
 
